@@ -14,7 +14,7 @@ def send_message():
     image = random_num()
     pwk.sendwhats_image\
         (MESSAGE_LINK, f"{IMAGE_PATH}{image}",\
-             f"\U0001F973 \U0001F384 \U00002744 Only {daysTillChristmas} days till Christmas \U0001F973 \U0001F384 \U00002744", tab_close=True) # send message to grope
+             f"\U0001F973 \U0001F384 \U00002744 Only {daysTillChristmas} days till Christmas \U0001F973 \U0001F384 \U00002744", tab_close=True) 
 
 def days_till_christmas():
     today = date.today()
