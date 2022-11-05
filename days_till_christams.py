@@ -1,6 +1,6 @@
 import pywhatkit as pwk
 from datetime import date 
-import random, os
+import random, os, schedule
 
 MESSAGE_LINK = "ENTER_MESSAGE_LINK"
 IMAGE_PATH = "PATH_FOR_IMAGES"
@@ -31,4 +31,7 @@ def days_till_christmas():
     daysTillChristmas = (christmas - today).days
     return daysTillChristmas
 
-send_message()
+schedule.every().day.at("7:00").do(send_message)
+
+while True:
+    schedule.run_pending()
