@@ -18,7 +18,11 @@ def send_message():
 
 def days_till_christmas():
     today = date.today()
-    christmas = date(2022, 12, 25)
+    year = today.year
+    christmas = date(year, 12, 25)
+    if today > christmas:
+        year = year + 1
+        christmas = date(year, 12, 25)
     daysTillChristmas = (christmas - today).days
     return daysTillChristmas
 
