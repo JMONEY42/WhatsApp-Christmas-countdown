@@ -1,6 +1,10 @@
 WhatsApp Christmas Countdown
 
-This application is intended to send automated WhatsApp messages counting down the days until Christmas. The message includes a random image related to Christmas. The application is written in python as to take advantage of its pywhatkit library. It also uses the datetime, random and os libraries.
+This application is intended to send automated WhatsApp messages, at 10am eavery day, counting down the days until Christmas. The message includes a random image related to Christmas. The application is written in python as to take advantage of its pywhatkit library. It also uses the datetime, schedule, random and os libraries. Python and PIP is also required.
+
+There are only 45 images in the folder provided so this application will only work for 45 days with the folder provided. 
 
 All that is needed to make the project work is to enter, in to MESSAGE_LINK, the phone number (with country code e.g. +1 for U.S. and Canada) or group link and in to IMAGE_PATH enter path where the images are saved.
-Python and PIP is also required.
+The time the message is sent can be changed by changeing the number in the schedule line towards the end of the file.
+
+When the application is exicuted WhatsApp must be singed in to on the web version of WhatsApp
