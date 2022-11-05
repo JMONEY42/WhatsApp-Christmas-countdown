@@ -4,9 +4,12 @@ import random, os, schedule
 
 MESSAGE_LINK = "ENTER_MESSAGE_LINK"
 IMAGE_PATH = "PATH_FOR_IMAGES"
+USED_IMAGES = []
 
 def random_num():
     image = random.choice(os.listdir(IMAGE_PATH))
+    while image in USED_IMAGES: # does not repeat image (Probably better way to do this)
+        image = random.choice(os.listdir(IMAGE_PATH))
     return image
 
 def send_message():
