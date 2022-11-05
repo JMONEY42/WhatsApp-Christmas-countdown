@@ -12,9 +12,14 @@ def random_num():
 def send_message():
     daysTillChristmas = days_till_christmas()
     image = random_num()
-    pwk.sendwhats_image\
+    if daysTillChristmas == 0:
+        pwk.sendwhats_image\
         (MESSAGE_LINK, f"{IMAGE_PATH}{image}",\
-             f"\U0001F973 \U0001F384 \U00002744 Only {daysTillChristmas} days till Christmas \U0001F973 \U0001F384 \U00002744", tab_close=True) 
+             f"\U0001F973 \U0001F384 \U00002744  ITS CHRISTMAS!!!!  \U0001F973 \U0001F384 \U00002744", tab_close=True) 
+    else:
+        pwk.sendwhats_image\
+            (MESSAGE_LINK, f"{IMAGE_PATH}{image}",\
+                f"\U0001F973 \U0001F384 \U00002744 Only {daysTillChristmas} days till Christmas \U0001F973 \U0001F384 \U00002744", tab_close=True) 
 
 def days_till_christmas():
     today = date.today()
