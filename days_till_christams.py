@@ -31,7 +31,7 @@ def days_till_christmas():
     daysTillChristmas = (christmas - today).days
     return daysTillChristmas
 
-schedule.every().day.at("7:00").do(send_message)
+schedule.every().day.at("10:00").do(send_message)
 
 while True:
     schedule.run_pending()
